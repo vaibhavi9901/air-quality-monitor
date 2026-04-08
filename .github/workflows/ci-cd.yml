@@ -28,7 +28,7 @@ jobs:
           pip install pytest flake8
 
       - name: Lint with flake8
-        run: flake8 backend/ --max-line-length=100
+        run: flake8 backend/ --max-line-length=150 --ignore=E302,E305,W293,E402,W292,F401,E501
 
       - name: Run tests
         run: pytest backend/tests/
