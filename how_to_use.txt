@@ -1,0 +1,21 @@
+1) BACKEND (Flask API)
+   - In the project root, run:
+     python app.py
+   - This starts the backend at http://127.0.0.1:5000
+
+   You can test the API directly in the browser:
+   - http://127.0.0.1:5000/api/air-quality/city/Kuala%20Lumpur
+   - http://127.0.0.1:5000/api/forecast/Kuala%20Lumpur/summary
+   - http://127.0.0.1:5000/api/historical/seasonal
+   - http://127.0.0.1:5000/api/alerts/check/city/Kuala%20Lumpur
+
+2) FRONTEND (React app)
+   - Make sure the `.env` file in the frontend (same folder as package.json) contains:
+     VITE_API_URL="http://localhost:5000/api"
+   - From the project root (or the frontend folder if you prefer), install deps once:
+     npm install
+   - Then start the frontend:
+     npm run dev
+
+   The frontend will open in the browser (usually at http://127.0.0.1:5173) and is already configured
+   to call the backend using VITE_API_URL, so the UI and backend are integrated.
